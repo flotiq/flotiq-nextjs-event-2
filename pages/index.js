@@ -1,49 +1,42 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Header } from 'flotiq-components-react'
-import { getExamplesData } from '../lib/examples'
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { Pagination } from 'flotiq-components-react'
+import Layout from '../layouts/layout'
+import EventCards from '../sections/EventCards'
+import config from '../lib/config'
+import { getEventAll } from '../lib/event'
 
-export default function Home({ examplesData }) {
+export default function Home({ data }) {
     return (
-        <main className="flex flex-col h-screen justify-center items-center">
-            <Head>
-                <title>{examplesData[0].title}</title>
-            </Head>
-            <div className="m-5">
-                <Image
-                    src="/Logo.svg"
-                    height={85}
-                    width={300}
-                    alt="Flotiq logo"
-                    className="mx-auto"
+        <Layout additionalClass={['bg-white']}>
+            <Helmet>
+                <title>{config.siteMetadata.title}</title>
+                <meta
+                    name="description"
+                    content={config.siteMetadata.description}
                 />
-            </div>
-            <Header
-                additionalClasses={["m-24 !text-5xl text-light-blue"]}
-                alignment="center"
-            >
-                {examplesData[0].header}
-            </Header>
-            <p className="text-center text-4xl text-light-blue">
-                You can learn more about Flotiq in the{' '}
-                <a
-                    href="https://flotiq.com/docs/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline"
-                >
-                    documentation
-                </a>
-            </p>
-        </main>
+            </Helmet>
+            <EventCards
+                events={data.data}
+                headerText="Upcoming events"
+                additnalClasses={['py-10']}
+            />
+            <Pagination
+                numOfPages={data.total_pages}
+                page={data.current_page}
+                rounded="none"
+            />
+        </Layout>
     )
 }
 
 export async function getStaticProps() {
-    const dataPage = await getExamplesData()
+    // Fetch all events
+    const events = await getEventAll()
+
     return {
         props: {
-            examplesData: dataPage.data,
+            data: events,
         },
     }
 }
