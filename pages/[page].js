@@ -1,70 +1,52 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { Pagination } from 'flotiq-components-react'
 import Layout from '../layouts/layout'
-import EventDescriptionCard from '../components/event/EventDescriptionCard'
-import Contact from '../sections/Contact'
-import NextEvents from '../sections/NextEvents'
-import { getEventAll, getEventBySlug } from '../lib/event'
+import EventCards from '../sections/EventCards'
 import config from '../lib/config'
-import FlotiqImage from '../lib/flotiqImage'
+import { getEventAll } from '../lib/event'
 
-const EventTemplate = ({ data, pageContext }) => (
+const Home = ({ data }) => (
     <Layout additionalClass={['bg-white']}>
         <Helmet>
-            <title>{config.name}</title>
-            <meta name="description" content={config.description} />
+            <title>{config.siteMetadata.title}</title>
+            <meta
+                name="description"
+                content={config.siteMetadata.description}
+            />
         </Helmet>
-        <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-0">
-            <EventDescriptionCard
-                name={data.name}
-                headerImage={FlotiqImage.getSrc(data.image[0], 0, 0)}
-                date={data.date}
-                description={data.description}
-                address={data.address}
-                price={data.price}
-            />
-        </div>
-        <NextEvents
-            events={pageContext.nextEvents}
-            headerText="Next Events"
-            pageContext={pageContext}
+        <EventCards
+            events={data.data}
+            headerText="Upcoming events"
+            additnalClasses={['py-10']}
         />
-        <div className="flex flex-wrap max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 mt-10">
-            <Contact
-                headerText="Do you have more questions?"
-                nameInputLabel="Name"
-                emailInputLabel="Email"
-                messageInputLabel="Message"
-                buttonLabel="Send"
-            />
-        </div>
+        <Pagination
+            numOfPages={data.total_pages}
+            page={data.current_page}
+            rounded="none"
+        />
     </Layout>
 )
 
-export default EventTemplate
+export default Home
 
 export async function getStaticProps({ params }) {
-    // Fetch project
-    const event = await getEventBySlug(params.page)
-    const filters = `{"date":{"type":"greaterThan","filter":"${event.data[0].date}"}}`
-    const nextEvents = await getEventAll(1, 4, filters)
+    const events = await getEventAll(params.page, config.event.eventPerPage)
 
     return {
         props: {
-            data: event.data[0],
-            pageContext: { nextEvents: nextEvents.data },
+            data: events,
         },
     }
 }
 
 export async function getStaticPaths() {
-    const fetchAllEvents = await getEventAll()
-    const allEvents = fetchAllEvents.data
+    const fetchAllEvents = await getEventAll(1, config.event.eventPerPage)
     const paths = []
 
-    for (let i = 0; i < allEvents.length; i += 1) {
+    for (let i = 0; i < fetchAllEvents.total_pages; i += 1) {
         paths.push({
-            params: { page: allEvents[i].slug },
+            params: { page: `${i + 1}` },
         })
     }
 

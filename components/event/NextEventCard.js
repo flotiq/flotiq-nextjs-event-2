@@ -18,11 +18,15 @@ const NextEventCard = ({
             'basis-full lg:basis-1/3 flex flex-wrap mb-5 lg:mb-10',
         ]}
     >
-        <Link href={`/${slug}`} passHref>
+        <Link href={`/event/${slug}`} passHref>
             <a href="replace" className="flex basis-full cursor-pointer">
                 <div
-                    className="basis-2/12 flex flex-col justify-center items-center
-        border-solid border border-primary font-light relative"
+                    className={[
+                        'basis-2/12 flex flex-col',
+                        'justify-center items-center',
+                        'border-solid border border-primary',
+                        'font-light relative',
+                    ].join(' ')}
                 >
                     <p className="text-center">
                         {new Date(date).getFullYear()}
@@ -36,7 +40,11 @@ const NextEventCard = ({
                                 .toString()
                                 .padStart(2, '0')}
                         </span>
-                        {new Date(date).getHours().toString().padStart(2, '0')}:
+                        {new Date(date)
+                            .getHours()
+                            .toString()
+                            .padStart(2, '0')}
+                        <span>:</span>
                         {new Date(date)
                             .getMinutes()
                             .toString()

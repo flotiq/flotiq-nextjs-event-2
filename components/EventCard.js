@@ -75,7 +75,7 @@ const CustomEventCard = ({
         EventLabel = FeaturedEventLabel
     }
     return (
-        <Link href={`/${slug}`} passHref>
+        <Link href={`/event/${slug}`} passHref>
             <a href="replace">
                 <Card
                     horizontal
@@ -89,8 +89,12 @@ const CustomEventCard = ({
                     <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
                         <Card.Body
                             additionalClasses={[
-                                'flex flex-col justify-between !p-5 md:!pd-10 !basis-full ' +
-                                    'lg:!basis-1/2 bg-light-gray order-2 lg:order-1',
+                                [
+                                    'flex flex-col justify-between',
+                                    '!p-5 md:!pd-10 !basis-full',
+                                    'lg:!basis-1/2 bg-light-gray',
+                                    'order-2 lg:order-1',
+                                ].join(' '),
                             ]}
                         >
                             <p>{date.replace('T', ' ')}</p>

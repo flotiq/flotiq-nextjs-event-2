@@ -60,5 +60,14 @@ module.exports = {
             process.platform === 'win32' ? 'windows' : 'unix',
         ],
         semi: 0,
+        'operator-linebreak': ['error', 'before'],
+        'comma-dangle': ['error', 'only-multiline'],
+        'object-curly-newline': [
+            'error',
+            {
+                ImportDeclaration: { multiline: true },
+            },
+        ],
+        'react/no-danger': 0,
     },
 }

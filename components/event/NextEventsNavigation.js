@@ -18,14 +18,13 @@ const NextEventsNavigation = ({
         ].join(' ')}
     >
         <div className="-mt-px w-0 flex-1 flex">
-            {pageContext.previous && (
-                <Link
-                    href={`/${pageContext.previous.slug}`}
-                    passHref
-                    className="border-t-2 border-transparent pt-4 pr-1
+            {pageContext?.previous && (
+                <Link href={`/event/${pageContext.previous.slug}`} passHref>
+                    <a
+                        href="replace"
+                        className="border-t-2 border-transparent pt-4 pr-1
                                 inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
-                >
-                    <a href={'replcae'}>
+                    >
                         <ArrowNarrowLeftIcon
                             className="mr-2 h-5 md:h-7 w-5 md:w-7"
                             aria-hidden="true"
@@ -36,17 +35,19 @@ const NextEventsNavigation = ({
             )}
         </div>
         <div className="-mt-px w-0 flex-1 flex justify-end">
-            {pageContext.next && (
-                <Link
-                    to={`/${pageContext.next.slug}`}
-                    className="border-t-2 border-transparent pt-4 pl-1
+            {pageContext?.next && (
+                <Link href={`/event/${pageContext.next.slug}`} passHref>
+                    <a
+                        href="replace"
+                        className="border-t-2 border-transparent pt-4 pl-1
                             inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
-                >
-                    {nextText}
-                    <ArrowNarrowRightIcon
-                        className="ml-2 h-5 md:h-7 w-5 md:w-7"
-                        aria-hidden="true"
-                    />
+                    >
+                        {nextText}
+                        <ArrowNarrowRightIcon
+                            className="ml-2 h-5 md:h-7 w-5 md:w-7"
+                            aria-hidden="true"
+                        />
+                    </a>
                 </Link>
             )}
         </div>
