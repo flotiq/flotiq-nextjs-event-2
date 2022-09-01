@@ -6,14 +6,14 @@ Next JS starter boilerplate with Flotiq source
 ===========================
 
 Kick off your project with this hello-world boilerplate. This starter ships with the main Next JS configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-Check out live demo: [https://flotiq-nextjs-boilerplate.netlify.app](https://flotiq-nextjs-boilerplate.netlify.app) 
+Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-nextjs-event-2.netlify.app) 
 
 ## Quick start
 
 1. **Start the project from template using npx**
 
     ```bash
-    git clone https://github.com/flotiq/nextjs-starter-boilerplate.git my-hello-world-starter
+    git clone https://github.com/flotiq/flotiq-nextjs-event-2.git my-hello-world-starter
     ```
 2. **Import example data from starter to Flotiq**
    
@@ -70,15 +70,15 @@ Check out live demo: [https://flotiq-nextjs-boilerplate.netlify.app](https://flo
 
 Deploy this starter with one click on [Vercel](https://vercel.com/):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflotiq%2Fnextjs-starter-boilerplate)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2)
 
 You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2Fflotiq%2Fnextjs-starter-boilerplate)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2)
 
 Or to [Netlify](https://www.netlify.com/):
 
-[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2Fflotiq%2Fnextjs-starter-boilerplate)
+[![Deploy](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2)
 
 ## Learning Next.js
 
@@ -90,4 +90,4 @@ Looking for more guidance? Full documentation for Next.js lives [on the website]
 
 If you wish to talk with us about this project, feel free to hop on our [![Discord Chat](https://img.shields.io/discord/682699728454025410.svg)](https://discord.gg/FwXcHnX).
 
-If you found a bug, please report it in [issues](https://github.com/flotiq/nextjs-starter-boilerplate/issues).
+If you found a bug, please report it in [issues](https://github.com/flotiq/flotiq-nextjs-event-2/issues).
