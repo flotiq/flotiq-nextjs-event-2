@@ -11,18 +11,8 @@ module.exports = {
             presets: ['@babel/preset-react'],
         },
     },
-    extends: [
-        'react-app',
-        'plugin:react/recommended',
-        'airbnb',
-        'eslint:recommended',
-    ],
-    plugins: [
-        'jsx-a11y',
-        'react-hooks',
-        'flowtype',
-        'import',
-    ],
+    extends: ['airbnb', 'eslint:recommended', 'next'],
+    plugins: ['jsx-a11y', 'react-hooks', 'import'],
     rules: {
         /* Restrict file extensions that may contain JSX */
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
@@ -59,8 +49,25 @@ module.exports = {
         'no-underscore-dangle': 0,
         'jsx-a11y/click-events-have-key-events': 0,
         'jsx-a11y/no-static-element-interactions': 0,
-        'react/function-component-definition': [1, {
-            namedComponents: 'arrow-function',
-        }],
+        'react/function-component-definition': [
+            1,
+            {
+                namedComponents: 'arrow-function',
+            },
+        ],
+        'linebreak-style': [
+            'error',
+            process.platform === 'win32' ? 'windows' : 'unix',
+        ],
+        semi: 0,
+        'operator-linebreak': ['error', 'before'],
+        'comma-dangle': ['error', 'only-multiline'],
+        'object-curly-newline': [
+            'error',
+            {
+                ImportDeclaration: { multiline: true },
+            },
+        ],
+        'react/no-danger': 0,
     },
-};
+}
