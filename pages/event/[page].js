@@ -71,8 +71,8 @@ export async function getStaticPaths() {
     const fetchAllEvents = await getEventAll(1, 10)
     const allEvents = fetchAllEvents.data
     const paths = []
-
-    for (let i = 0; i < allEvents.length; i += 1) {
+    const eventsCount = allEvents ? allEvents.length : 0;
+    for (let i = 0; i < eventsCount; i += 1) {
         paths.push({
             params: { page: allEvents[i].slug },
         })
