@@ -26,13 +26,5 @@
       "dataUrl": "/api/v1/content/_media/_media-43e239f7-d694-48db-9448-79b9fb6111df"
     }
   ],
-  "internal": {
-    "createdAt": "2020-12-14T15:00:10+00:00",
-    "deletedAt": "",
-    "updatedAt": "2022-02-17T16:58:29+00:00",
-    "contentType": "event",
-    "objectTitle": "NgVikings Meetup",
-    "workflow_state": "saved"
-  },
   "description": "<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel commodo erat, eget interdum risus. Donec dignissim, lacus at commodo ullamcorper, erat eros hendrerit nunc, a feugiat ligula enim et velit. Fusce ultrices elit quis ex cursus posuere.</strong></p><p>Ut interdum auctor ipsum, at auctor augue gravida fermentum. Vivamus tristique tortor eget lacus volutpat, nec efficitur nunc hendrerit. Integer eu dapibus leo, sed gravida massa. Etiam luctus eros ut arcu tincidunt, commodo maximus purus pulvinar. Cras sit amet nulla at risus accumsan sodales.</p>"
 }
