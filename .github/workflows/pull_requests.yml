@@ -1,6 +1,10 @@
 name: PR workflow
 on:
   pull_request:
+
+permissions:
+  pull-requests: write
+  
 jobs:
   test-build:
     runs-on: ubuntu-latest
