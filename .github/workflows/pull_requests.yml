@@ -1,11 +1,8 @@
-name: test-build
-on: 
+name: PR workflow
+on:
   pull_request:
-    types:
-      - opened
-  workflow_dispatch:
 jobs:
-  test:
+  test-build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,3 +23,18 @@ jobs:
         env:
           FLOTIQ_API_KEY: ${{ secrets.FLOTIQ_API_KEY }}
           FLOTIQ_API_URL: ${{ secrets.FLOTIQ_API_URL }}
+  dependabot:
+    needs: test-build
+    runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
