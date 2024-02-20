@@ -1,0 +1,29 @@
+name: Push workflow
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 14.x ]
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install -g flotiq-cli
+      - run: flotiq import . ${{ secrets.FLOTIQ_API_KEY }}
+      - run: yarn install
+      - run: yarn build
+        env:
+          FLOTIQ_API_KEY: ${{ secrets.FLOTIQ_API_KEY }}
+          FLOTIQ_API_URL: ${{ secrets.FLOTIQ_API_URL }}
+
