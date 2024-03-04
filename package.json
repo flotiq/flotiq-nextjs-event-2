@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": { 
-    "@fontsource/lato": "^4.5.1",
+    "@fontsource/lato": "^5.0.19",
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "@popperjs/core": "^2.11.0",

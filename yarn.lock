@@ -1148,10 +1148,10 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@fontsource/lato@^4.5.1":
-  version "4.5.9"
-  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.9.tgz#7c819b412581591f9abc1c04ea07d67af1e501cd"
-  integrity sha512-VkDnHBbPee/KMAUuBwe3rEKRDECo1MsA+I+ucZNU6FYdHrsv+SKpYgNr7nk/OhoaGrn9PrpXcmcd9eoD4J3Y6Q==
+"@fontsource/lato@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-5.0.19.tgz#9403de626b68057056cd7a669f08ddd1278ce607"
+  integrity sha512-RdZy7fmmazrs6eV0lvA68/ss+IyLufD52jAx0qJ6Uw7kVZbjrUGh9JZdJshf+X5GdI3/3Anmg1sEPfqBrZTiNg==
 
 "@headlessui/react@^1.4.2":
   version "1.6.6"
