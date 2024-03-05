@@ -2,6 +2,9 @@
     <img src="https://editor.flotiq.com/fonts/fq-logo.svg" alt="Flotiq logo" title="Flotiq" align="right" height="60" />
 </a>
 
+
+
+
 Next JS starter for events with Flotiq source
 ===========================
 
