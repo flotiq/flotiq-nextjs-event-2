@@ -1,0 +1,4 @@
+[template.environment]
+  FLOTIQ_API_URL="https://api.flotiq.com"
+  FLOTIQ_API_KEY="YOUR FLOTIQ API KEY"
+
