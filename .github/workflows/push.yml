@@ -2,7 +2,7 @@ name: Push workflow
 on:
   push:
     branches:
-      - master
+      - main
   schedule:
       - cron: "0 8 * * 1"
   workflow_dispatch:
