@@ -4,7 +4,8 @@ import { Pagination } from 'flotiq-components-react'
 import Layout from '../layouts/layout'
 import EventCards from '../sections/EventCards'
 import config from '../lib/config'
-import { getEventAll } from '../lib/event'
+import { getEvents } from '../lib/event'
+import { replaceUndefinedWithNull } from '../lib/sanitize';
 
 const Home = ({ data }) => (
     <Layout additionalClass={['bg-white']}>
@@ -31,17 +32,17 @@ const Home = ({ data }) => (
 export default Home
 
 export async function getStaticProps({ params }) {
-    const events = await getEventAll(params.page, config.event.eventPerPage)
+    const events = await getEvents(params.page, config.event.eventPerPage)
 
     return {
         props: {
-            data: events,
+            data: replaceUndefinedWithNull(events),
         },
     }
 }
 
 export async function getStaticPaths() {
-    const fetchAllEvents = await getEventAll(1, config.event.eventPerPage)
+    const fetchAllEvents = await getEvents(1, config.event.eventPerPage)
     const paths = []
 
     for (let i = 0; i < fetchAllEvents.total_pages; i += 1) {
