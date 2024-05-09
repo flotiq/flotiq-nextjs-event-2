@@ -76,7 +76,7 @@ const CustomEventCard = ({
     }
     return (
         <Link href={`/event/${slug}`} passHref>
-            <a href="replace">
+            <a href="#">
                 <Card
                     horizontal
                     bordered={false}
