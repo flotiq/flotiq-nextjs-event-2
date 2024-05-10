@@ -1,17 +1,25 @@
-import React from 'react';
-import { Header } from 'flotiq-components-react';
+import React from 'react'
+import { Header } from 'flotiq-components-react'
 
-const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabel, buttonLabel }) => (
+const Contact = ({
+    headerText,
+    nameInputLabel,
+    emailInputLabel,
+    messageInputLabel,
+    buttonLabel,
+}) => (
     <div className="flex flex-wrap mx-auto w-5/6 md:w-4/6">
         <Header
             level={2}
-            additionalClasses={['text-3xl lg:text-5xl leading-tight basis-full '
-            + 'md:basis-1/2 lg:basis-5/12 px-0 md:px-5']}
+            additionalClasses={[
+                'text-3xl lg:text-5xl leading-tight basis-full ' +
+                    'md:basis-1/2 lg:basis-5/12 px-0 md:px-5',
+            ]}
         >
             {headerText}
         </Header>
         <form
-            action="#"
+            action="/#"
             method="POST"
             className="font-sora font-light flex flex-col space-y-4 basis-full md:basis-1/2 lg:basis-7/12"
         >
@@ -67,6 +75,6 @@ const Contact = ({ headerText, nameInputLabel, emailInputLabel, messageInputLabe
             </div>
         </form>
     </div>
-);
+)
 
-export default Contact;
+export default Contact
