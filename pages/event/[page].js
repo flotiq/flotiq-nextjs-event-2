@@ -10,7 +10,7 @@ import {
     getEventPrevious,
     getEventNext,
 } from '../../lib/event'
-import { replaceUndefinedWithNull } from '../../lib/sanitize'
+import replaceUndefinedWithNull from '../../lib/sanitize'
 import config from '../../lib/config'
 import FlotiqImage from '../../lib/flotiqImage'
 

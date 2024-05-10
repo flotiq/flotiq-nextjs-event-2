@@ -5,7 +5,8 @@ import Layout from '../layouts/layout'
 import EventCards from '../sections/EventCards'
 import config from '../lib/config'
 import { getEvents } from '../lib/event'
-import { replaceUndefinedWithNull } from '../lib/sanitize'
+import '../lib/sanitize'
+import replaceUndefinedWithNull from '../lib/sanitize'
 
 const Home = ({ data }) => (
     <Layout additionalClass={['bg-white']}>
