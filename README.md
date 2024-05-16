@@ -52,15 +52,13 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
    data. To build your customized API package, just run this command:
    
    ```bash
-   npx flotiq-codegen-ts generate
+   npx flotiq-codegen-ts generate --compiled-js
    ```
-   
-   Go to `./flotiqApi` directory and Execute `npm run build` command
 
    Now, in your project, you can use the `FlotiqApi` class for easy and convenient communication with the Flotiq API.
 
    ```javascript
-      import {FlotiqApi} from '../flotiqApi/src';
+      import {FlotiqApi} from '../flotiqApi/index';
       
       const api = new FlotiqApi(apiKey);
    ```
@@ -68,7 +66,7 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
    Examples of its usage can be found in the `lib/event.js` file of this project or can be explored in the
    [flotiq-codegen-ts repository](https://github.com/flotiq/flotiq-codegen-ts)
 
-   _Note: If you make any changes (additions or deletions) to the `content type definitions` in your Flotiq account, you will need to rerun `npm run build` in the `./flotiqApi` directory._
+   _Note: If you make any changes (additions or deletions) to the `content type definitions` in your Flotiq account, you will need to rerun `npx flotiq-codegen-ts generate --compiled-js` command._
 
 6. **Start developing.**
 
@@ -88,7 +86,8 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
 
    You can now easily manage your content using [Flotiq editor](https://editor.flotiq.com)
    
-   _Note: If you are using `FlotiqApi` generated from `flotiq-codegen-ts` remember to rerun `npm run build` inside `./flotiqApi` after changes (additions or edits) to the `content type definitions` in your Flotiq_
+   _Note: If you are using `FlotiqApi` generated from `flotiq-codegen-ts` remember to rerun `npx flotiq-codegen-ts generate --compiled-js`
+   command after changes (additions or edits) to the `content type definitions` in your Flotiq_
 
 ## Deploy
 
