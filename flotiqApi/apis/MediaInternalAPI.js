@@ -167,10 +167,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * Allows you to create or create and update up to 100 objects of Media (internal) type. <br />
      * Create a batch of _media objects
      */
-    MediaInternalAPI.prototype.batchCreate = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.batchCreate = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchCreateRaw(requestParameters, initOverrides)];
@@ -220,10 +220,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * Allows you to delete up to 100 objects of Media (internal) type. <br />Request body accepts an array of content object IDs that are to be deleted.<br />
      * Delete a batch of _media objects
      */
-    MediaInternalAPI.prototype.batchDelete = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.batchDelete = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchDeleteRaw(requestParameters, initOverrides)];
@@ -273,10 +273,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * Allows you to update up to 100 objects of Media (internal) type. <br />
      * Update selected fields of a batch of objects
      */
-    MediaInternalAPI.prototype.batchPatch = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.batchPatch = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchPatchRaw(requestParameters, initOverrides)];
@@ -326,10 +326,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * Allows you to create object of Media (internal) type. <br />
      * Create a _media object
      */
-    MediaInternalAPI.prototype.create = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.create = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.createRaw(requestParameters, initOverrides)];
@@ -436,10 +436,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * Get ids of removed Media (internal) objects. <br />
      * Get removed object identifiers
      */
-    MediaInternalAPI.prototype.getRemoved = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.getRemoved = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.getRemovedRaw(requestParameters, initOverrides)];
@@ -564,10 +564,10 @@ var MediaInternalAPI = /** @class */ (function (_super) {
      * List objects of Media (internal) type. <br />
      * List _media objects
      */
-    MediaInternalAPI.prototype.list = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    MediaInternalAPI.prototype.list = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.listRaw(requestParameters, initOverrides)];

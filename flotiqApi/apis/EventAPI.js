@@ -167,10 +167,10 @@ var EventAPI = /** @class */ (function (_super) {
      * Allows you to create or create and update up to 100 objects of Event type. <br />
      * Create a batch of event objects
      */
-    EventAPI.prototype.batchCreate = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.batchCreate = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchCreateRaw(requestParameters, initOverrides)];
@@ -220,10 +220,10 @@ var EventAPI = /** @class */ (function (_super) {
      * Allows you to delete up to 100 objects of Event type. <br />Request body accepts an array of content object IDs that are to be deleted.<br />
      * Delete a batch of Event objects
      */
-    EventAPI.prototype.batchDelete = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.batchDelete = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchDeleteRaw(requestParameters, initOverrides)];
@@ -273,10 +273,10 @@ var EventAPI = /** @class */ (function (_super) {
      * Allows you to update up to 100 objects of Event type. <br />
      * Update selected fields of a batch of objects
      */
-    EventAPI.prototype.batchPatch = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.batchPatch = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.batchPatchRaw(requestParameters, initOverrides)];
@@ -326,10 +326,10 @@ var EventAPI = /** @class */ (function (_super) {
      * Allows you to create object of Event type. <br />
      * Create a Event object
      */
-    EventAPI.prototype.create = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.create = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.createRaw(requestParameters, initOverrides)];
@@ -436,10 +436,10 @@ var EventAPI = /** @class */ (function (_super) {
      * Get ids of removed Event objects. <br />
      * Get removed object identifiers
      */
-    EventAPI.prototype.getRemoved = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.getRemoved = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.getRemovedRaw(requestParameters, initOverrides)];
@@ -564,10 +564,10 @@ var EventAPI = /** @class */ (function (_super) {
      * List objects of Event type. <br />
      * List Event objects
      */
-    EventAPI.prototype.list = function () {
-        return __awaiter(this, arguments, void 0, function (requestParameters, initOverrides) {
+    EventAPI.prototype.list = function (requestParameters, initOverrides) {
+        if (requestParameters === void 0) { requestParameters = {}; }
+        return __awaiter(this, void 0, void 0, function () {
             var response;
-            if (requestParameters === void 0) { requestParameters = {}; }
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.listRaw(requestParameters, initOverrides)];
