@@ -2,7 +2,7 @@
   "name": "flotiq-nextjs-event-2",
   "private": true,
   "description": "Flotiq NextJS event starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Flotiq team <helo@flotiq.com> (https://flotiq.com/)",
   "scripts": {
@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": { 
+  "dependencies": {
     "@fontsource/lato": "^5.0.20",
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^1.0.6",
@@ -32,7 +32,7 @@
     "typescript": "^5.4.5",
     "webpack": "^5.91.0"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "@babel/core": "^7.24.4",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-syntax-flow": "^7.24.1",

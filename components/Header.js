@@ -11,7 +11,10 @@ const Header = () => (
                 <div className="max-w-7xl flex justify-center mx-auto py-4">
                     <div className="flex-shrink-0 flex grow md:grow-0 items-center justify-center">
                         <Link href="/" passHref>
-                            <a href="replace" className="block w-[168px] md:w-[252px] h-8 md:h-12 relative">
+                            <a
+                                href="/#"
+                                className="block w-[168px] md:w-[252px] h-8 md:h-12 relative"
+                            >
                                 <Image
                                     src="/assets/event-logo.svg"
                                     alt="Flotiq"

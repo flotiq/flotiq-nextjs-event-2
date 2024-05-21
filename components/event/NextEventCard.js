@@ -19,7 +19,7 @@ const NextEventCard = ({
         ]}
     >
         <Link href={`/event/${slug}`} passHref>
-            <a href="replace" className="flex basis-full cursor-pointer">
+            <a href="/#" className="flex basis-full cursor-pointer">
                 <div
                     className={[
                         'basis-2/12 flex flex-col',
@@ -40,10 +40,7 @@ const NextEventCard = ({
                                 .toString()
                                 .padStart(2, '0')}
                         </span>
-                        {new Date(date)
-                            .getHours()
-                            .toString()
-                            .padStart(2, '0')}
+                        {new Date(date).getHours().toString().padStart(2, '0')}
                         <span>:</span>
                         {new Date(date)
                             .getMinutes()

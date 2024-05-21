@@ -21,7 +21,7 @@ const NextEventsNavigation = ({
             {pageContext?.previous && (
                 <Link href={`/event/${pageContext.previous.slug}`} passHref>
                     <a
-                        href="replace"
+                        href="/#"
                         className="border-t-2 border-transparent pt-4 pr-1
                                 inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
                     >
@@ -38,7 +38,7 @@ const NextEventsNavigation = ({
             {pageContext?.next && (
                 <Link href={`/event/${pageContext.next.slug}`} passHref>
                     <a
-                        href="replace"
+                        href="/#"
                         className="border-t-2 border-transparent pt-4 pl-1
                             inline-flex items-center text-sm md:text-lg font-medium hover:text-primary"
                     >
