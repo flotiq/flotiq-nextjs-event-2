@@ -20,7 +20,7 @@
     "@tailwindcss/typography": "^0.5.12",
     "dotenv": "^16.4.5",
     "flotiq-components-react": "^1.1.5",
-    "next": "^12.3.4",
+    "next": "^14.2.3",
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.5",
     "next-runtime-dotenv": "^1.5.1",
