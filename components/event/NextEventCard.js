@@ -18,64 +18,62 @@ const NextEventCard = ({
             'basis-full lg:basis-1/3 flex flex-wrap mb-5 lg:mb-10',
         ]}
     >
-        <Link href={`/event/${slug}`} passHref>
-            <a href="/#" className="flex basis-full cursor-pointer">
-                <div
-                    className={[
-                        'basis-2/12 flex flex-col',
-                        'justify-center items-center',
-                        'border-solid border border-primary',
-                        'font-light relative',
-                    ].join(' ')}
-                >
-                    <p className="text-center">
-                        {new Date(date).getFullYear()}
-                        <br />
+        <Link href={`/event/${slug}`} className="flex basis-full cursor-pointer">
+            <div
+                className={[
+                    'basis-2/12 flex flex-col',
+                    'justify-center items-center',
+                    'border-solid border border-primary',
+                    'font-light relative',
+                ].join(' ')}
+            >
+                <p className="text-center">
+                    {new Date(date).getFullYear()}
+                    <br />
+                    {new Date(date)
+                        .toLocaleString('en-us', { month: 'short' })
+                        .toUpperCase()}
+                    <span className="block text-2xl md:text-4xl">
                         {new Date(date)
-                            .toLocaleString('en-us', { month: 'short' })
-                            .toUpperCase()}
-                        <span className="block text-2xl md:text-4xl">
-                            {new Date(date)
-                                .getDate()
-                                .toString()
-                                .padStart(2, '0')}
-                        </span>
-                        {new Date(date).getHours().toString().padStart(2, '0')}
-                        <span>:</span>
-                        {new Date(date)
-                            .getMinutes()
+                            .getDate()
                             .toString()
                             .padStart(2, '0')}
-                    </p>
-                </div>
-                <Card.Body
+                    </span>
+                    {new Date(date).getHours().toString().padStart(2, '0')}
+                    <span>:</span>
+                    {new Date(date)
+                        .getMinutes()
+                        .toString()
+                        .padStart(2, '0')}
+                </p>
+            </div>
+            <Card.Body
+                additionalClasses={[
+                    '!basis-7/12 flex flex-col justify-between !p-5 md:!pd-10 bg-light-gray',
+                ]}
+            >
+                <p>{date.replace('T', ' ')}</p>
+                <Card.Title
+                    additionalClasses={['font-normal !text-xl my-3']}
+                >
+                    {name}
+                </Card.Title>
+                <Card.Text
                     additionalClasses={[
-                        '!basis-7/12 flex flex-col justify-between !p-5 md:!pd-10 bg-light-gray',
+                        'line-clamp-4 lg:line-clamp-3 !my-0',
                     ]}
                 >
-                    <p>{date.replace('T', ' ')}</p>
-                    <Card.Title
-                        additionalClasses={['font-normal !text-xl my-3']}
-                    >
-                        {name}
-                    </Card.Title>
-                    <Card.Text
-                        additionalClasses={[
-                            'line-clamp-4 lg:line-clamp-3 !my-0',
-                        ]}
-                    >
-                        {excerpt}
-                    </Card.Text>
-                    <div className="mt-5 flex flex-wrap items-center justify-self-end justify-between">
-                        <p>{address}</p>
-                        <p>{price}</p>
-                    </div>
-                </Card.Body>
-                <div
-                    className="basis-3/12 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${headerImage}')` }}
-                />
-            </a>
+                    {excerpt}
+                </Card.Text>
+                <div className="mt-5 flex flex-wrap items-center justify-self-end justify-between">
+                    <p>{address}</p>
+                    <p>{price}</p>
+                </div>
+            </Card.Body>
+            <div
+                className="basis-3/12 bg-cover bg-center"
+                style={{ backgroundImage: `url('${headerImage}')` }}
+            />
         </Link>
     </Card>
 )
