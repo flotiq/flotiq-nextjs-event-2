@@ -75,53 +75,51 @@ const CustomEventCard = ({
         EventLabel = FeaturedEventLabel
     }
     return (
-        <Link href={`/event/${slug}`} passHref>
-            <a href="/#">
-                <Card
-                    horizontal
-                    bordered={false}
-                    rounded="none"
-                    additionalClasses={[
-                        'w-full flex flex-wrap mb-10 cursor-pointer',
-                    ]}
-                >
-                    <EventLabel date={new Date(date)} />
-                    <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
-                        <Card.Body
-                            additionalClasses={[
-                                [
-                                    'flex flex-col justify-between',
-                                    '!p-5 md:!pd-10 !basis-full',
-                                    'lg:!basis-1/2 bg-light-gray',
-                                    'order-2 lg:order-1',
-                                ].join(' '),
-                            ]}
+        <Link href={`/event/${slug}`}>
+            <Card
+                horizontal
+                bordered={false}
+                rounded="none"
+                additionalClasses={[
+                    'w-full flex flex-wrap mb-10 cursor-pointer',
+                ]}
+            >
+                <EventLabel date={new Date(date)} />
+                <div className="flex flex-wrap basis-5/6 lg:basis-11/12">
+                    <Card.Body
+                        additionalClasses={[
+                            [
+                                'flex flex-col justify-between',
+                                '!p-5 md:!pd-10 !basis-full',
+                                'lg:!basis-1/2 bg-light-gray',
+                                'order-2 lg:order-1',
+                            ].join(' '),
+                        ]}
+                    >
+                        <p>{date.replace('T', ' ')}</p>
+                        <Card.Title additionalClasses={['font-normal']}>
+                            {name}
+                        </Card.Title>
+                        <Card.Text
+                            additionalClasses={['line-clamp-4 !my-0']}
                         >
-                            <p>{date.replace('T', ' ')}</p>
-                            <Card.Title additionalClasses={['font-normal']}>
-                                {name}
-                            </Card.Title>
-                            <Card.Text
-                                additionalClasses={['line-clamp-4 !my-0']}
-                            >
-                                {excerpt}
-                            </Card.Text>
-                            <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
-                                <p>{address}</p>
-                                <p>{price}</p>
-                            </div>
-                        </Card.Body>
-                        <div className="basis-full lg:basis-1/2 !order-1 lg:!order-2">
-                            <Card.Img
-                                src={headerImage}
-                                alt={name}
-                                additionalClasses={['']}
-                                imageAdditionalProps={imgSize}
-                            />
+                            {excerpt}
+                        </Card.Text>
+                        <div className="mt-10 flex flex-wrap items-center justify-self-end justify-between">
+                            <p>{address}</p>
+                            <p>{price}</p>
                         </div>
+                    </Card.Body>
+                    <div className="basis-full lg:basis-1/2 !order-1 lg:!order-2">
+                        <Card.Img
+                            src={headerImage}
+                            alt={name}
+                            additionalClasses={['']}
+                            imageAdditionalProps={imgSize}
+                        />
                     </div>
-                </Card>
-            </a>
+                </div>
+            </Card>
         </Link>
     )
 }

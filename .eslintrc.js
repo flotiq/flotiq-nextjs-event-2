@@ -12,7 +12,7 @@ module.exports = {
         },
     },
     extends: ['airbnb', 'eslint:recommended', 'next'],
-    plugins: ['jsx-a11y', 'react-hooks', 'import'],
+    plugins: ['jsx-a11y', 'import'],
     rules: {
         /* Restrict file extensions that may contain JSX */
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
