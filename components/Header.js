@@ -16,7 +16,7 @@ const Header = () => (
                                 alt="Flotiq"
                                 width={252}
                                 height={48}
-                                layout="responsive"
+                                style={{ width: '100%', height: 'auto' }}
                             />
                         </Link>
                     </div>
