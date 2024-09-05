@@ -20,7 +20,7 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
    ```bash
    npm i -g flotiq-cli
    cd my-hello-world-starter
-   flotiq import . [flotiqApiKey]
+   flotiq import .flotiq [flotiqApiKey]
    ```
    _Note: You need to put your Read and write API key as the `flotiqApiKey` for import to work, You don't need any content types in your account._
 
