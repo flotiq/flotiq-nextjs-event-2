@@ -51,7 +51,7 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
    This package simplifies Typescript Fetch API integration for your Flotiq project, tailored to your Flotiq account 
    data.
    
-   To install Flotiq SDK you can use flotiq-nextjs-setup CLI, that will not only seemlessly generate SDK for your Next.js project, but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more. To use the flotiq-nextjs-setup CLI simply:
+   To install Flotiq SDK you can use flotiq-nextjs-setup CLI, that will not only seamlessly generate SDK for your Next.js project, but will also add content cache revalidation endpoint, handle draft mode for unpublished content on Flotiq and more. To use the flotiq-nextjs-setup CLI simply:
     - install flotiq-nextjs-setup CLI:
         ```bash
         npm install -g flotiq-nextjs-setup
