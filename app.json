@@ -1,0 +1,14 @@
+{
+    "name": "flotiq-nextjs-event-2",
+    "repository": "https://github.com/flotiq/flotiq-nextjs-event-2",
+    "env":{
+      "FLOTIQ_API_KEY": {
+        "description": "Flotiq API key"
+      }
+    },
+    "buildpacks": [
+      {
+        "url": "heroku/nodejs"
+      }
+    ]
+}
