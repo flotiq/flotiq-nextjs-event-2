@@ -103,11 +103,11 @@ Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-
 
 Deploy this starter with one click on [Vercel](https://vercel.com/):
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2&env=FLOTIQ_API_KEY&envDescription=Variables%20needed%20for%20the%20application.&envLink=https%3A%2F%2Fflotiq.com%2Fdocs%2FAPI%2F)
 
 You can also deploy this project to [Heroku](https://www.heroku.com/) in 3 minutes:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https%3A%2F%2Fgithub.com%2Fflotiq%2Fflotiq-nextjs-event-2)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/flotiq/flotiq-nextjs-event-2)
 
 Or to [Netlify](https://www.netlify.com/):
 
