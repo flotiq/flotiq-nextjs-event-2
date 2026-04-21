@@ -1,10 +1,12 @@
+'use client'
+
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import Link from 'next/link'
 import { Button, Header } from 'flotiq-components-react'
+import { Helmet } from 'react-helmet-async'
 import Layout from '../layouts/layout'
 
-const NotFoundPage = () => (
+const NotFoundContent = () => (
     <Layout>
         <Helmet>
             <title>Page not found</title>
@@ -13,7 +15,6 @@ const NotFoundPage = () => (
             Page not found, sorry
         </Header>
         <div className="text-center my-20 py-20">
-            {/* Example usage of button */}
             <Link href="/">
                 <Button label="Go back to index" />
             </Link>
@@ -21,4 +22,4 @@ const NotFoundPage = () => (
     </Layout>
 )
 
-export default NotFoundPage
+export default NotFoundContent

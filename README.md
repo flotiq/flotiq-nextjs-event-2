@@ -8,6 +8,9 @@ Next JS starter for events with Flotiq source
 Kick off your project with this hello-world boilerplate. This starter ships with the main Next JS configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 Check out live demo: [https://flotiq-nextjs-event-2.netlify.app](https://flotiq-nextjs-event-2.netlify.app) 
 
+> [!NOTE]
+> On the main branch, you can see a project based on the Next.js app router. This setup leverages the latest routing capabilities provided by Next.js, offering improved performance and flexibility. On the `page-router` branch, there is a starter that uses an older version of routing, specifically the page router. This version might be more familiar to those who have worked with previous iterations of Next.js.
+
 ## Quick start
 
 1. **Start the project from template using npx**
