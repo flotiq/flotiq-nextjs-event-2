@@ -44,9 +44,13 @@ const Page = async ({ params }) => {
         notFound()
     }
 
-    const filtersMoreEvents = `{"date":{"type":"greaterThan","filter":"${eventData.date}"}}`
     const moreEvents = replaceUndefinedWithNull(
-        await getEvents(1, 3, filtersMoreEvents)
+        await getEvents(1, 3, {
+            date: {
+                type: 'greaterThan',
+                filter: eventData.date,
+            },
+        })
     )
     const nextEvents = replaceUndefinedWithNull(
         await getEventNext(eventData.date)
