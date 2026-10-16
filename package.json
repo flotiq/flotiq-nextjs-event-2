@@ -19,7 +19,7 @@
     "@popperjs/core": "^2.11.8",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.20",
-    "dotenv": "^16.6.1",
+    "dotenv": "^18.0.7",
     "flotiq-components-react": "^2.0.2",
     "next": "^16.4.2",
     "next-compose-plugins": "^2.2.1",
